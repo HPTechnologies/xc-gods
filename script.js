@@ -61,7 +61,7 @@ const trackList = [
 
 // Create Tracks
 for(let track of trackList) {
-  tracks.push([track, `/Tracks/${track}.mp3`]);
+  tracks.push([track, `Tracks/${track}.mp3`]);
 }
 
 // getSource function
