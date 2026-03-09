@@ -9,7 +9,7 @@ audio.addEventListener("ended", () => {
 });
 
 audio.addEventListener("canplay", () => {
-  text.innerText = ``;
+  text.innerText = `Something`;
   audio.play();
 });
 
