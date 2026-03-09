@@ -14,8 +14,6 @@ audio.addEventListener("canplay", () => {
 });
 
 
-
-
 const order = [
   "Guns N' Roses - November Rain",
   "The Killers - Mr. Brightside",
