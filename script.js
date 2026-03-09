@@ -5,7 +5,7 @@ let index = 0;
 
 audio.addEventListener("ended", () => {
   index += 1;
-  audio.src = tracks[index][1];
+  audio.src = getSource(order[index]);
 });
 
 audio.addEventListener("canplay", () => {
@@ -17,7 +17,9 @@ audio.addEventListener("canplay", () => {
 
 
 const order = [
-
+  "Guns N' Roses - November Rain",
+  "The Killers - Mr. Brightside",
+  "Poison - Talk Dirty To Me"
 ];
 
 const trackList = [
@@ -56,12 +58,13 @@ const trackList = [
   "Quiet Riot - Bang Your Head",
 ];
 
+
 // Create Tracks
 for(let track of trackList) {
   tracks.push([track, `/Tracks/${track}.mp3`]);
 }
 
-
+// getSource function
 function getSource(track) {
   let source;
   
