@@ -1,15 +1,20 @@
 const audio = document.getElementById("audio");
+const text = document.getElementById("text");
 index = 0;
 
 audio.addEventListener("ended", () => {
   index += 1;
-  if(index < tracks.length) {
-    audio.src = tracks[index];
-  }
+  audio.src = tracks[index][1];
 });
 
+audio.addEventListener("canplay", () => {
+  text.innerText = ``;
+  audio.play();
+});
+
+
 // Sources
-const songs = [
+const order = [
 
 ];
 
