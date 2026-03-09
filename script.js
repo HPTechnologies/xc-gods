@@ -1,6 +1,7 @@
 const audio = document.getElementById("audio");
 const text = document.getElementById("text");
-index = 0;
+let tracks = [];
+let index = 0;
 
 audio.addEventListener("ended", () => {
   index += 1;
@@ -12,46 +13,54 @@ audio.addEventListener("canplay", () => {
   audio.play();
 });
 
+// Create Tracks
+for(let x of trackList) {
+  tracks.push([x, "/Tracks/" + x + ".mp3"]);
+}
+
+
+
+
 
 // Sources
 const order = [
 
 ];
 
-const tracks = [
-  ["AC/DC - Thunderstruck", "/Tracks/AC/DC - Thunderstruck.mp3"],
+const trackList = [
+  "AC/DC - Thunderstruck",
 
-  ["A Flock Of Seagulls - I Ran", "/Tracks/A Flock Of Seagulls - I Ran.mp3"],
+  "A Flock Of Seagulls - I Ran",
 
-  ["Bon Jovi - Livin' On A Prayer", "/Tracks/Bon Jovi - Livin' On A Prayer.mp3"],
-  ["Bon Jovi - Runaway", "/Tracks/Bon Jovi - Runaway.mp3"],
+  "Bon Jovi - Livin' On A Prayer",
+  "Bon Jovi - Runaway",
 
-  ["Def Leppard - Animal", "/Tracks/.mp3"],
-  ["Def Leppard - Hysteria", ""],
-  ["Def Leppard - Photograph", ""],
+  "Def Leppard - Animal",
+  "Def Leppard - Hysteria",
+  "Def Leppard - Photograph",
 
-  ["Dokken - In My Dreams", ""],
-  ["Dokken - Into The Fire", ""],
+  "Dokken - In My Dreams",
+  "Dokken - Into The Fire",
 
-  ["Europe - The Final Countdown", ""],
+  "Europe - The Final Countdown",
 
-  ["Firehouse - Love Of A Lifetime", ""],
+  "Firehouse - Love Of A Lifetime",
 
-  ["Guns N' Roses - November Rain", ""],
-  ["Guns N' Roses - Paradise City", ""],
-  ["Guns N' Roses - Sweet Child O' Mine", ""],
-  ["Guns N' Roses - Welcome To The Jungle", ""],
+  "Guns N' Roses - November Rain",
+  "Guns N' Roses - Paradise City",
+  "Guns N' Roses - Sweet Child O' Mine",
+  "Guns N' Roses - Welcome To The Jungle",
 
-  ["Journey - Don't Stop Believin'", ""],
-  ["Journey - Faithfully", ""],
-  ["Journey - Separate Ways", ""],
-  ["Journey - Wheel In The Sky", ""],
+  "Journey - Don't Stop Believin'",
+  "Journey - Faithfully",
+  "Journey - Separate Ways",
+  "Journey - Wheel In The Sky",
 
-  ["Poison - Every Rose Has Its Thorn", ""],
-  ["Poison - Nothin' But A Good Time", ""],
-  ["Poison - Talk Dirty To Me", ""],
+  "Poison - Every Rose Has Its Thorn",
+  "Poison - Nothin' But A Good Time",
+  "Poison - Talk Dirty To Me",
   
-  ["Quiet Riot - Bang Your Head", ""],
+  "Quiet Riot - Bang Your Head",
 ];
 
 
