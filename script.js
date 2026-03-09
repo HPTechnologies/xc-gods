@@ -19,14 +19,14 @@ const order = [
 ];
 
 const tracks = [
-  ["AC/DC - Thunderstruck", ""],
+  ["AC/DC - Thunderstruck", "/Tracks/AC/DC - Thunderstruck.mp3"],
 
-  ["A Flock Of Seagulls - I Ran", ""],
+  ["A Flock Of Seagulls - I Ran", "/Tracks/A Flock Of Seagulls - I Ran.mp3"],
 
-  ["Bon Jovi - Livin' On A Prayer", ""],
-  ["Bon Jovi - Runaway", ""],
+  ["Bon Jovi - Livin' On A Prayer", "/Tracks/Bon Jovi - Livin' On A Prayer.mp3"],
+  ["Bon Jovi - Runaway", "/Tracks/Bon Jovi - Runaway.mp3"],
 
-  ["Def Leppard - Animal", ""],
+  ["Def Leppard - Animal", "/Tracks/.mp3"],
   ["Def Leppard - Hysteria", ""],
   ["Def Leppard - Photograph", ""],
 
@@ -53,3 +53,17 @@ const tracks = [
   
   ["Quiet Riot - Bang Your Head", ""],
 ];
+
+
+function getSource(track) {
+  let source;
+  
+  for(let i = 0; i < tracks.length; i++) {
+    
+    if(track == tracks[i][0]) {     
+      return tracks[i][1];
+    }
+
+  }
+
+}
