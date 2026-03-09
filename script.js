@@ -14,7 +14,7 @@ const songs = [
 ];
 
 const tracks = [
-  ["AC/DC - Thunderstruck"],
+  ["AC/DC - Thunderstruck", ""],
 
   ["A Flock Of Seagulls - I Ran", ""],
 
