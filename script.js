@@ -13,16 +13,9 @@ audio.addEventListener("canplay", () => {
   audio.play();
 });
 
-// Create Tracks
-for(let x of trackList) {
-  tracks.push([x, "/Tracks/" + x + ".mp3"]);
-}
 
 
 
-
-
-// Sources
 const order = [
 
 ];
@@ -62,6 +55,11 @@ const trackList = [
   
   "Quiet Riot - Bang Your Head",
 ];
+
+// Create Tracks
+for(let track of trackList) {
+  tracks.push([track, `/Tracks/${track}.mp3`]);
+}
 
 
 function getSource(track) {
