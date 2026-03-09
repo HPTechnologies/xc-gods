@@ -1,7 +1,9 @@
 const audio = document.getElementById("audio");
 const text = document.getElementById("text");
+
 let tracks = [];
 let index = 0;
+
 
 audio.addEventListener("ended", () => {
   index += 1;
