@@ -72,6 +72,8 @@ const trackList = [
   "Poison - Talk Dirty To Me",
   
   "Quiet Riot - Bang Your Head",
+
+  "The Killers - Mr. Brightside"
 ];
 
 
