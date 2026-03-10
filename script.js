@@ -10,6 +10,7 @@ forwardButton.innerText = ">>>";
 let tracks = [];
 let index = 0;
 
+
 forwardButton.addEventListener("click", () => {
   index += 1;
   audio.src = getSource(order[index]);
@@ -88,6 +89,7 @@ availableTracks.innerText = `\n\nAvailable Tracks`;
 for(let track of trackList) {
   availableTracks.innerText += `\n${track}`;
 }
+
 
 // Initial Source
 audio.src = getSource(order[index]);
