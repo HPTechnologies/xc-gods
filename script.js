@@ -12,14 +12,14 @@ let index = 0;
 forwardButton.addEventListener("click", () => {
   index += 1;
   audio.src = getSource(order[index]);
-  text.innerText = getTrack(audio.currentSrc);
+  text.innerText = order[index];
   audio.play();
 });
 
 backButton.addEventListener("click", () => {
   index -= 1;
   audio.src = getSource(order[index]);
-  text.innerText = getTrack(audio.currentSrc);
+  text.innerText = order[index];
   audio.play();
 });
 
@@ -27,7 +27,7 @@ backButton.addEventListener("click", () => {
 audio.addEventListener("ended", () => {
   index += 1;
   audio.src = getSource(order[index]);
-  text.innerText = getTrack(audio.currentSrc);
+  text.innerText = order[index];
   audio.play();
 });
 
