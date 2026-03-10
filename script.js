@@ -85,6 +85,7 @@ for(let track of trackList) {
 
 // Initial Source
 audio.src = getSource(order[index]);
+text.innerText = order[index];
 
 
 // getSource function
