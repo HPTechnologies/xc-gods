@@ -64,6 +64,11 @@ for(let track of trackList) {
   tracks.push([track, `Tracks/${track}.mp3`]);
 }
 
+
+// Initial Source
+audio.src = getSource(order[index]);
+
+
 // getSource function
 function getSource(track) {
   
