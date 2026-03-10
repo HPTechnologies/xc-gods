@@ -85,7 +85,7 @@ for(let track of trackList) {
 }
 
 // Create availableTracks textbox
-availableTracks.innerText = `\n\nAvailable Tracks`;
+availableTracks.innerText = `\n\nAvailable Tracks\n`;
 for(let track of trackList) {
   availableTracks.innerText += `\n${track}`;
 }
