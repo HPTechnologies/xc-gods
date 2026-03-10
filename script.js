@@ -1,7 +1,8 @@
 const audio = document.getElementById("audio");
 const backButton = document.getElementById("backButton");
 const forwardButton = document.getElementById("forwardButton");
-const text = document.getElementById("text");
+const trackName = document.getElementById("trackName");
+const availableTracks = document.getElementById("availableTracks");
 
 backButton.innerText = "<<<";
 forwardButton.innerText = ">>>";
@@ -12,14 +13,14 @@ let index = 0;
 forwardButton.addEventListener("click", () => {
   index += 1;
   audio.src = getSource(order[index]);
-  text.innerText = order[index];
+  trackName.innerText = order[index];
   audio.play();
 });
 
 backButton.addEventListener("click", () => {
   index -= 1;
   audio.src = getSource(order[index]);
-  text.innerText = order[index];
+  trackName.innerText = order[index];
   audio.play();
 });
 
@@ -27,7 +28,7 @@ backButton.addEventListener("click", () => {
 audio.addEventListener("ended", () => {
   index += 1;
   audio.src = getSource(order[index]);
-  text.innerText = order[index];
+  trackName.innerText = order[index];
   audio.play();
 });
 
@@ -82,10 +83,15 @@ for(let track of trackList) {
   tracks.push([track, `Tracks/${track}.mp3`]);
 }
 
+// Create availableTracks textbox
+availableTracks.innerText = "";
+for(let track of trackList) {
+  availableTracks.innerText += `${track}\n`;
+}
 
 // Initial Source
 audio.src = getSource(order[index]);
-text.innerText = order[index];
+trackName.innerText = order[index];
 
 
 // getSource function
