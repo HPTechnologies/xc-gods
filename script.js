@@ -11,7 +11,7 @@ audio.addEventListener("ended", () => {
 });
 
 audio.addEventListener("canplay", () => {
-  text.innerText = `Something`;
+  text.innerText = order[index];
   audio.play();
 });
 
@@ -66,7 +66,6 @@ for(let track of trackList) {
 
 // getSource function
 function getSource(track) {
-  let source;
   
   for(let i = 0; i < tracks.length; i++) {
     
