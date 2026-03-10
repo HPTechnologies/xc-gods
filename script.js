@@ -9,11 +9,25 @@ forwardButton.innerText = ">>>";
 let tracks = [];
 let index = 0;
 
+forwardButton.addEventListener("click", () => {
+  index += 1;
+  audio.src = getSource(order[index]);
+  text.innerText = getTrack(audio.currentSrc);
+  audio.play();
+});
+
+backButton.addEventListener("click", () => {
+  index -= 1;
+  audio.src = getSource(order[index]);
+  text.innerText = getTrack(audio.currentSrc);
+  audio.play();
+});
+
 
 audio.addEventListener("ended", () => {
   index += 1;
   audio.src = getSource(order[index]);
-  text.innerText = order[index];
+  text.innerText = getTrack(audio.currentSrc);
   audio.play();
 });
 
@@ -80,6 +94,17 @@ function getSource(track) {
       return tracks[i][1];
     }
 
+  }
+
+}
+
+// getTrack function
+function getTrack(source) {
+
+  for(let i = 0; i < tracks.length; i++) {
+    if(source == tracks[i][1]) {
+      return tracks[i][0];
+    }
   }
 
 }
