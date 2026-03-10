@@ -1,5 +1,10 @@
 const audio = document.getElementById("audio");
+const backButton = document.getElementById("backButton");
+const forwardButton = document.getElementById("forwardButton");
 const text = document.getElementById("text");
+
+backButton.innerText = "<<<";
+forwardButton.innerText = ">>>";
 
 let tracks = [];
 let index = 0;
@@ -8,9 +13,6 @@ let index = 0;
 audio.addEventListener("ended", () => {
   index += 1;
   audio.src = getSource(order[index]);
-});
-
-audio.addEventListener("canplay", () => {
   text.innerText = order[index];
   audio.play();
 });
