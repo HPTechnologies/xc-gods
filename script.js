@@ -84,9 +84,9 @@ for(let track of trackList) {
 }
 
 // Create availableTracks textbox
-availableTracks.innerText = `\n\nAvailable Tracks\n`;
+availableTracks.innerText = `\n\nAvailable Tracks`;
 for(let track of trackList) {
-  availableTracks.innerText += `${track}\n`;
+  availableTracks.innerText += `\n${track}`;
 }
 
 // Initial Source
